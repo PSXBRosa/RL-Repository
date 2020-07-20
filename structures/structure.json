@@ -1,0 +1,55 @@
+{
+"config":
+    {
+        "name" : "dqn",
+        "layers": [
+            {
+                "class_name": "Dense",
+                "config":
+                {
+                "name":"dense_1",
+                "input_shape": 625,
+                "units":512,
+                "activation":"relu"
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config":
+                {
+                "name":"dense_2",
+                "input_shape": 512,
+                "units":128,
+                "activation":"relu"
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config":
+                {
+                "name":"dense_3",
+                "input_shape": 128,
+                "units":32,
+                "activation":"relu"
+                }
+            },
+            {
+                "class_name": "Dense",
+                "config":
+                {
+                "name":"out",
+                "input_shape": 32,
+                "units":3,
+                "activation":"relu"
+                }
+            }
+        ],
+        "hyperparameters":
+        {
+        "alpha":0.001,
+        "gamma":0.9
+        }
+            
+        
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "config":
+        {
+            "name" : "dqn",
+            "layers": [
+                {
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name":"dense_1",
+                    "input_shape": 4,
+                    "units":16,
+                    "activation":"relu"
+                    }
+                },
+                {
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name":"dense_2",
+                    "input_shape": 16,
+                    "units":16,
+                    "activation":"relu"
+                    }
+                },
+                {
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name":"dense_3",
+                    "input_shape": 16,
+                    "units":16,
+                    "activation":"relu"
+                    }
+                },
+                {
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name":"dense_4",
+                    "input_shape": 16,
+                    "units":16,
+                    "activation":"relu"
+                    }
+                },
+                {
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name":"out",
+                    "input_shape": 16,
+                    "units":2,
+                    "activation":"linear"
+                    }
+                }
+            ],
+            "hyperparameters":
+            {
+            "alpha":0.01,
+            "lrdecay":0.9995,
+            "lrmin":0.00001,
+            "gamma":0.9,
+            "a":0.2,
+            "b":0.4,
+            "B":0.0001,
+            "e":1,
+            "epsilon_treshold": 200,
+            "epsilon_min": 0.01,
+            "batch": 256
+            }
+                
+            
+        }
+    }

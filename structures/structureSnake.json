@@ -1,0 +1,83 @@
+{
+    "config":
+        {
+            "name" : "dqn",
+            "layers": [
+                {
+                    "class_name": "Conv2d",
+                    "config":
+                    {
+                    "name":"conv_1",
+                    "input_shape": 1,
+                    "units":16,
+                    "stride": 1,
+                    "kernel": 7,
+                    "padd": 0,
+                    "activation":"relu"
+                    }
+                },
+                {
+                    "class_name": "Conv2d",
+                    "config":
+                    {
+                    "name":"conv_2",
+                    "input_shape": 16,
+                    "units":16,
+                    "stride": 3,
+                    "kernel": 5,
+                    "padd": 0,
+                    "activation":"relu"
+                    }
+                },
+                {
+                    "class_name": "Conv2d",
+                    "config":
+                    {
+                    "name":"conv_2",
+                    "input_shape": 16,
+                    "units":16,
+                    "stride": 1,
+                    "kernel": 3,
+                    "padd": 0,
+                    "activation":"relu"
+                    }
+                },
+                {   
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name": "dense_1",
+                    "input_shape": 144,
+                    "units": 128,
+                    "activation": "relu"
+                    }
+                },
+                {   
+                    "class_name": "Dense",
+                    "config":
+                    {
+                    "name": "out",
+                    "input_shape": 128,
+                    "units": 3,
+                    "activation": "linear"
+                    }
+                }
+            ],
+            "hyperparameters":
+            {
+            "alpha":0.01,
+            "lrdecay":0.9995,
+            "lrmin":0.00001,
+            "gamma":0.9,
+            "a":0.2,
+            "b":0.4,
+            "B":0.0001,
+            "e":1,
+            "epsilon_treshold": 200,
+            "epsilon_min": 0.01,
+            "batch": 256
+            }
+                
+            
+        }
+    }
